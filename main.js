@@ -36,7 +36,7 @@ $(document).ready(function(){
     });
 });
 
-
+//save the data when entering student data
 function saveData(){
     let table = document.getElementById("table_body");
     let n,r,p,s;
@@ -85,11 +85,13 @@ function saveData(){
 
 }
 
+//edits the data
 function editData(){
     console.log("entered");
     let ch = document.getElementsByClassName("checkBox");
     let count=0;
     let pos=0;
+    //check for more than one checkbox/es
     for(let x=0;x<ch.length;x++){
         if(ch[x].checked){
             console.log("found");
@@ -104,6 +106,7 @@ function editData(){
         document.getElementById("delAlert").innerHTML=checkOne;
         $("#delAlert").show();
     }
+    //if only one checkbox is ticked
     else if(count==1){
         let tr = document.getElementsByClassName("rowData");
         let ch = tr[pos].childNodes;
@@ -130,6 +133,7 @@ function editData(){
 
 }
 
+//deletes entry from the table
 function deleteData(){
     let table = document.getElementById("table_body");
     let tr = document.getElementsByClassName("rowData");    
