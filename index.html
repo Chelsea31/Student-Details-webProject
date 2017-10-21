@@ -14,13 +14,13 @@
         </div>
         <div class="container">
             <div class="row justify-content-md-center">
-                <button type="button" class="btn btn-outline-dark btn-lg" data-toggle="collapse" data-target="#collapseEntry" aria-expanded="false" aria-controls="collapseEntry" id="entData">
+                <button type="button" class="btn btn-outline-info btn-lg" data-toggle="collapse" data-target="#collapseEntry" aria-expanded="false" aria-controls="collapseEntry" id="entData">
                 Enter Student Data
                 </button>
-                <button class="btn btn-outline-dark btn-lg" type="button" data-toggle="collapse" data-target=".collapseCheck" aria-expanded="false" aria-controls="collapseCheck" id = "delData">
+                <button class="btn btn-outline-info btn-lg" type="button" data-toggle="collapse" data-target=".collapseCheck" aria-expanded="false" aria-controls="collapseCheck" id = "delData">
                     Delete Student Data
                 </button>
-                <button class="btn btn-outline-dark btn-lg" type="button" data-toggle="collapse" data-target=".collapseEdit" aria-expanded="false" aria-controls="collapseEdit" id="editData">
+                <button class="btn btn-outline-info btn-lg" type="button" data-toggle="collapse" data-target=".collapseEdit" aria-expanded="false" aria-controls="collapseEdit" id="editData">
                     Edit Student Detail
                 </button>
                 <div class="collapse" id="collapseEntry">
@@ -30,7 +30,7 @@
                         <input placeholder="Roll Number" class="form-control" id="roll" />
                         <input placeholder="Passout Year" class="form-control" id="pass_year" />
                         <input placeholder="Stream" class="form-control" id="stream" />
-                        <submit type="submit" class="btn btn-dark" onclick = "saveData()">Submit</submit>
+                        <submit type="submit" class="btn btn-info" onclick = "saveData()">Submit</submit>
                     </form>
                 </div>
 
@@ -41,16 +41,16 @@
                         <input placeholder="Roll Number" class="form-control" id="roll_edit" />
                         <input placeholder="Passout Year" class="form-control" id="pass_year_edit" />
                         <input placeholder="Stream" class="form-control" id="stream_edit" />
-                        <submit type="submit" class="btn btn-dark" onclick = "editData()">Edit Data</submit>
+                        <submit type="submit" class="btn btn-info" onclick = "editData()">Edit Data</submit>
                     </form>
                 </div>
                 
             </div>
             <div class = "collapse collapseCheck text-center">
                 <br>                    
-                <button class  = "btn btn-dark" onclick = "deleteData()">Delete Data</button>
+                <button class  = "btn btn-info" onclick = "deleteData()">Delete Data</button>
             </div>
-            <div class="alert alert-dark text-center" id = "delAlert" role="alert" style = "margin:20px 0 0 0;"></div>
+            <div class="alert alert-info text-center" id = "delAlert" role="alert" style = "margin:20px 0 0 0;"></div>
             
             <br>            
         </div>
