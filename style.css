@@ -1,0 +1,17 @@
+#info-bar{
+    position:relative;
+    background-color: #ffc107;
+    text-align: center;
+}
+
+#status{
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 17px;
+  display: inline-block;
+  margin:0.5%;
+}
+
+#delAlert{
+    margin:20px 0 0 0;
+}
