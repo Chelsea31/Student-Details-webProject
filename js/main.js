@@ -11,15 +11,20 @@ let fail = "Please select the student/s you want to delete.";
 let succ = "Operation successfully completed.";
 let checkOne="Please select only one entry to edit.";
 
+//***** jquery functions for various COLLAPSE implementations *****//
+
 $(document).ready(function(){
 
 //hides the alert by default
     $("#delAlert").hide();
+
 //hides the entry bar when delete button is clicked
     $("#delData,#editData").click(function(){
         $('#collapseEntry').collapse('hide');
         $("#delAlert").hide();
+        $(".checkBox").collapse('show');
     });
+    
 //hides edit data bar
     $("#delData,#entData").click(function(){
         $('.collapseEdit').collapse('hide');
@@ -34,21 +39,29 @@ $(document).ready(function(){
 
 //defualt status message
     $("#status").html(basicInfo);
+
 //reverts to default when mouse leaves
     $("#entData,#delData,#editData").mouseleave(function(){
         $("#status").html(basicInfo);
     });
+
 //on entry in enter data button
     $("#entData").mouseenter(function(){
         $("#status").html(entryInfo);
     });
+
 //on entry in delete data button
     $("#delData").mouseenter(function(){
         $("#status").html(deleteInfo);
     });
+
 //on entry in edit data button
     $("#editData").mouseenter(function(){
         $("#status").html(editInfo);
+    });
+// on entering data, the checkboxes hide
+    $("#entData").click(function(){
+        $(".checkBox").collapse('hide');
     });
 
 });
@@ -67,7 +80,7 @@ function saveData(){
     let check = document.createElement("input");
     check.type = "checkbox";
     check.value="toDelete";
-    check.className="collapse checkBox collapseCheck collapseEdit";
+    check.className="collapse checkBox";
 
     //creating table data elements for appending
     let tdn = document.createElement("td");
@@ -99,7 +112,6 @@ function saveData(){
     i++;
     document.getElementById("delAlert").innerHTML=succ;
     $("#delAlert").show();
-
 }
 
 //edits the data
